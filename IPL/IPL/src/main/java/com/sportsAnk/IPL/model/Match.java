@@ -4,33 +4,39 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.time.LocalDate;
+import java.util.Date;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 public class Match {
+
+    @Id
     private String id;
-    private  String city;
+    private String city;
     private LocalDate date;
     private String season;
     private String matchNumber;
     private String team1;
     private String team2;
     private String venue;
-    private String tossWinner;
-    private String tossDecision;
-    private String superOver;
-    private String winningTeam;
-    private String wonBy;
-    private String margin;
+    private String toss_winner;
+    private String toss_decision;
+    private String super_over;
+    private String target_runs;
+    private String target_overs;
+    private String winner;
+    private String result;
+    private String result_margin;
     private String method;
-    private String playerOfMatch;
-
-//    private String team1Players;
-//    private String team2Players;
+    private String player_of_match;
     private String Umpire1;
     private String umpire2;
-
+    private String match_type;
 
 
 }
